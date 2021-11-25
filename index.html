@@ -1,0 +1,555 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/roundslider.css">
+</head>
+
+<body>
+    <div class="modal sld">
+        <div class="modalwindow slideInLeft">
+            <div class="chart">
+                <div class="headmodal">
+                    <div class="upper">
+                        <div class="leftm">Xiaomi</div>
+                        <div class="right">
+                            <div class="messure">+23</div>
+                            <img src="img/icon_temperature_2.svg" class="temp" />
+                        </div>
+                    </div>
+                    <div class="mbottom">Включено</div>
+                </div>
+                <div class="control_wrap">
+                    <div class="ctrls">
+                        <p class="ctrl-but active">вручную</p>
+                        <p class="ctrl-but">холодно</p>
+                        <p class="ctrl-but">тепло</p>
+                        <p class="ctrl-but">жарко</p>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div id="leftimg" class="text"></div>
+                    <input class="range-slider" value="50" min="0" max="100" type="range">
+                    <div id="rightimg" class="text"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="apply but">Применить</button>
+                <button class="close but">Закрыть</button>
+            </div>
+        </div>
+        <div class="closeoverlay"></div>
+    </div>
+    <div class="modal light">
+        <div class="modalwindow slideInLeft">
+            <div class="chart">
+                <div class="headmodal">
+                    <div class="upper">
+                        <div class="leftm">Xiaomi</div>
+                        <div class="right">
+                            <img src="img/icon_sun_2.svg" class="temp" />
+                        </div>
+                    </div>
+                    <div class="mbottom">Включено</div>
+                </div>
+                <div class="control_wrap">
+                    <div class="ctrls">
+                        <p class="ctlg-but active">вручную</p>
+                        <p class="ctlg-but">дневной свет</p>
+                        <p class="ctlg-but">вечерний свет</p>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div id="leftimg" class="text"></div>
+                    <input class="range-slider" value="50" min="0" max="100" type="range">
+                    <div id="rightimg" class="text"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="apply but">Применить</button>
+                <button class="close but">Закрыть</button>
+            </div>
+        </div>
+        <div class="closeoverlay"></div>
+    </div>
+    <div class="modal round">
+        <div class="modalwindow slideInLeft">
+            <div class="chart">
+                <div class="headmodal">
+                    <div class="upper">
+                        <div class="leftm">Xiaomi</div>
+                        <div class="right">
+                            <div class="messure">+23</div>
+                            <img src="img/icon_sun_2.svg" class="temp" />
+                        </div>
+                    </div>
+                    <div class="bottom">Включено</div>
+                </div>
+                <div id="rds" class="rs-control rs-animation"
+                    style="height: 210px; width: 210px;margin-right:auto;margin-left:auto">
+                    <div class="rs-container" style="height: 210px; width: 210px;">
+                        <div class="rs-inner-container">
+                            <div class="rs-block rs-border rs-split">
+                                <div class="rs-path  range-color" style="transform: rotate(315deg);"></div>
+                                <div id="r2" class="rs-path  range-color"
+                                    style="opacity: 0; transform: rotate(270deg);"></div>
+                                <div id="r1" class="rs-path  path-color" style="transform: rotate(450deg); opacity: 1;">
+                                </div>
+                                <div class="rs-path  path-color"
+                                    style="opacity: 1; z-index: 1; transform: rotate(135deg);"></div>
+
+                                <div class="rs-overlay  rs-bg-color" style="transform: rotate(585deg);"></div>
+                            </div>
+                            <span class="rs-block" style="padding: 16px;">
+                                <div class="rs-inner rs-bg-color rs-border"></div>
+                            </span>
+                        </div>
+                        <div id="t" class="rs-bar" style="z-index: 7; transform: rotate(450deg);">
+                            <div class="rs-handle rs-move rs-handle-square"
+                                style="height: 0px; width: 0px; margin: 0px 0px 0px 9px;"></div>
+                        </div>
+                        <span id="tooltip">+15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="apply but">Применить</button>
+                <button class="close but">Закрыть</button>
+            </div>
+        </div>
+        <div class="closeoverlay"></div>
+    </div>
+    <div class="content">
+        <div class="menu">
+            <img id="logo" src="img/house.svg">
+            <input id="menu-toggle" type="checkbox">
+            <label for="menu-toggle" class="label-toggle">
+                <span class="navicon"></span>
+            </label>
+            <div class="menu_left">
+                <div class="block_active menu_block">Сводка</div>
+                <div class="menu_block">Устройства</div>
+                <div class="menu_block">Сценарии</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main">
+                <div class="colleft">
+                    <div class="up">Главное</div>
+                    <div class="bottomleft">
+
+                        <img id="bg1" src="img/bg1x.png" />
+
+                        <div class="user">
+                            <div class="priv">
+                                Привет, Геннадий!
+                            </div>
+                            <div class="signal">
+                                Двери и окна закрыты, сигнализация включена.
+                            </div>
+                            <div class="weather">
+                                <div class="home">Дома
+                                </div>
+                                <div class="window">За окном
+                                </div>
+                            </div>
+                            <div class="temp">
+                                <div class="hometemp">+23
+                                </div>
+
+                                <div class="windowtemp">+19
+                                </div>
+                                <img id="cloud" src="img/cloud-drizzle.svg" />
+                            </div>
+                        </div>
+                        <div class="maindevice">
+                            <input id="dev-ver-1" checked="checked" class="devices_ver" name="vert_devices"
+                                type="radio">
+                            <input id="dev-ver-2" class="devices_ver" name="vert_devices" type="radio">
+                            <label id="Ml-1" for="dev-ver-1">
+                                <img id="M-1" src="img/M.svg" />
+                            </label>
+                            <label id="Ml-2" for="dev-ver-2">
+                                <img id="M-2" src="img/M.svg" />
+                            </label>
+                            <div class="devices">
+
+                                <div class="devices_screen">
+                                    <div class="devices_track">
+                                        <div class="devices_item">
+                                            <div class="device sliderNum">
+                                                <div class="imgtemp">
+                                                </div>
+                                                <div class="title">
+                                                    <div class="name">Philips Cooler</div>
+                                                    <div class="power">Начнет охлаждать в 16:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="devices_item sliderImg">
+                                            <div class="device">
+                                                <div class="imgsun">
+                                                </div>
+                                                <div class="title">
+                                                    <div class="name">Xiaomi Yeelight LED Smart Bulb</div>
+                                                    <div class="power">Включится в 17:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="devices_item">
+                                            <div class="device sliderRound">
+                                                <div class="imgtemp2">
+                                                </div>
+                                                <div class="title">
+                                                    <div class="name">Elgato Eve Degree Connected</div>
+                                                    <div class="power">Включится в 17:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="devices_item">
+                                            <div class="device sliderNum">
+                                                <div class="imgtemp2">
+                                                </div>
+                                                <div class="title">
+                                                    <div class="name">Elgato Eve Degree Connected</div>
+                                                    <div class="power">Включится в 17:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colright">
+                    <input id="dev-right-1" checked="checked" class="devices_right" name="right_devices" type="radio">
+                    <input id="dev-right-2" class="devices_right" name="right_devices" type="radio">
+                    <div class="up">
+                        <span>Избранные сценарии</span>
+                        <div class="arrows">
+                            <label for="dev-right-1">
+                                <p><i class="leftarr"></i></p>
+                            </label>
+                            <label for="dev-right-2">
+                                <p><i class="rightarr"></i></p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wr_bt">
+                        <div class="bt_wr">
+                            <div class="bottom">
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgsun2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Выключить весь свет в доме и во дворе</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Я ухожу</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Включить свет в коридоре</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgshedd">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Набрать горячую ванну</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgshedd">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Сделать пол тёплым во всей квартире</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgsun2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Выключить весь свет в доме и во дворе</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Я ухожу</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Включить свет в коридоре</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="device">
+                                        <div class="imgshedd">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Набрать горячую ванну</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgshedd">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Сделать пол тёплым во всей квартире</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="device">
+                                        <div class="imgtemp2">
+                                        </div>
+                                        <div class="title">
+                                            <div class="name">Xiaomi</div>
+                                            <div class="power noactive">Включится в 17:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input id="devices-act-1" checked="checked" class="devices_hor" name="hor_devices" type="radio">
+            <input id="devices-act-2" class="devices_hor" name="hor_devices" type="radio">
+            <div class="devicecontrol">
+                <span class="fav">Избранные устройства</span>
+                <label id="all-dd" class="dd-button active" for="dropdown">
+                    <span>Все</span>
+                    <p><i class="downarr"></i></p>
+                </label>
+
+                <input id="dropdown" type="checkbox">
+                <div class="controls">
+                    <div class="dd-button"><span class="">Кухня</span></div>
+                    <div class="dd-button"><span class="">Зал</span></div>
+                    <div class="dd-button"><span class="">Камеры</span></div>
+                    <div class="dd-button"><span class="">Лампочки</span></div>
+                </div>
+
+                <div class="arrows">
+                    <label for="devices-act-1">
+                        <p><i class="leftarr"></i></p>
+                    </label>
+                    <label for="devices-act-2">
+                        <p><i class="rightarr"></i></p>
+                    </label>
+                </div>
+            </div>
+            <div class="devices">
+                <div class="devices_screen">
+                    <div class="devices_track">
+                        <div class="devices_item">
+                            <div class="device sliderNum">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi Yeelight LED Smart Bulb</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderImg">
+                                <div class="imgsun">
+                                </div>
+                                <div class="title">
+                                    <div class="name">D-Link Omna 180 Cam</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderRound">
+                                <div class="imgtemp">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Elgato Eve Degree Connected</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderNum">
+                                <div class="imgsun">
+                                </div>
+                                <div class="title">
+                                    <div class="name">LIFX Mini Day & Dusk A60 E27</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderImg">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi Mi Air Purifier 2S</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderRound">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Philips Zhirui</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderImg">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi Mi Air Purifier 2S</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderNum">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderRound">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devices_item">
+                            <div class="device sliderImg">
+                                <div class="imgsun2">
+                                </div>
+                                <div class="title">
+                                    <div class="name">Xiaomi</div>
+                                    <div class="power">Включится в 17:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_left">
+                <div class="blockfooter">Помощь</div>
+                <div class="blockfooter">Обратная связь</div>
+                <div class="blockfooter">Разработчикам</div>
+                <div class="blockfooter">Условия использования</div>
+            </div>
+            <div class="footer_right">Информация справа</div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

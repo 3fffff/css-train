@@ -1,0 +1,156 @@
+.rs-container {
+	position: relative
+}
+
+.rs-control *,
+.rs-control *:before,
+.rs-control *:after {
+	box-sizing: border-box
+}
+
+.rs-bar {
+	transform-origin: 100% 50%
+}
+
+.rs-control .rs-split .rs-path {
+	transform-origin: 50% 100%
+}
+
+.rs-control .rs-overlay {
+	transform-origin: 100% 100%
+}
+
+.rs-rounded .rs-seperator,
+.rs-split .rs-path {
+	background-clip: padding-box
+}
+
+.rs-inner-container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden
+}
+
+
+.rs-block {
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	z-index: 3
+}
+
+.rs-block .rs-inner {
+	border-radius: 1000px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative
+}
+
+.rs-overlay {
+	width: 50%
+}
+
+
+.rs-overlay {
+	position: absolute;
+	background-color: #fff;
+	z-index: 3;
+	top: 0;
+	height: 50%
+}
+
+.rs-bar {
+	display: block;
+	position: absolute;
+	height: 0;
+	z-index: 10
+}
+
+.rs-bar.rs-rounded {
+	z-index: 5
+}
+
+.rs-bar .rs-seperator {
+	height: 0;
+	display: block;
+	float: left
+}
+
+.rs-bar.rs-start.rs-rounded .rs-seperator {
+	border-radius: 0 0 1000px 1000px
+}
+
+.rs-bar.rs-end.rs-rounded .rs-seperator {
+	border-radius: 1000px 1000px 0 0
+}
+
+.rs-bar {
+	width: 50%
+}
+
+.rs-bar {
+	top: 50%
+}
+
+.bottom .rs-bar {
+	top: 0
+}
+
+.rs-path {
+	display: block;
+	width: 100%;
+	border-radius: 1000px 1000px 0 0;
+	overflow: hidden;
+	height: 50%;
+	position: absolute;
+	top: 0;
+	transition: all .25s;
+	z-index: 2
+}
+
+.rs-bg-color {
+	background-color: #fff
+}
+
+#rds .rs-handle {
+	background-color: transparent;
+	border: 8px solid transparent;
+	border-right-color: black;
+	margin: -8px 0 0 14px !important;
+
+}
+
+#rds .range-color {
+	background-image: url("../img/Oval1x.svg");
+	background-color: white;
+}
+
+#rds .path-color {
+	background-image: url("../img/Oval1g.svg");
+	background-color: white;
+}
+
+.rs-border {
+	box-shadow: 0 2px 4px 0 rgba(134, 121, 71, 0.45);
+}
+
+#tooltip {
+	font-size: 66px;
+	font-weight: bolder;
+	font-family: Arial;
+	color: #333333;
+	letter-spacing: 0;
+	margin-top: -45px;
+	margin-left: -55px;
+	position: absolute;
+	cursor: default;
+	border: 1px solid transparent;
+	z-index: 10;
+	top: 50%;
+	left: 50%
+}
