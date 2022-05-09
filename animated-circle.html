@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>circular bar</title>
+    <style>
+        * {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .points {
+            width: 3px;
+            height: 15px;
+            background: #0007;
+            position: absolute;
+            transform: rotate(calc(var(--i)*var(--deg))) translateY(-100px);
+            border-radius: 3px;
+            animation: glow .01s linear forwards;
+            animation-delay: calc(var(--i)*0.02s)
+        }
+
+        @keyframes glow {
+            100% {
+                background: var(--col);
+                box-shadow: 0 0 20px var(--col);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="circle" dots="80" markedDots="30" style="--col:#ff0070;">
+        </div>
+    </div>
+    <script>
+        const circles = document.querySelectorAll(".circle")
+        circles.forEach(val => {
+            const numDots = val.getAttribute("dots")
+            const marketDots = val.getAttribute("markedDots")
+            let pt = ``
+            const deg = 360 / numDots
+            for (let i = 1; i <= numDots; i++) {
+                if (i >= marketDots) pt += `<div class="points" style="--i:${i};--deg:${deg}deg;animation:unset;"></div>`
+                else pt += `<div class="points" style="--i:${i};--deg:${deg}deg;"></div>`
+            }
+            val.innerHTML = pt
+        })
+
+    </script>
+</body>
+
+</html>
