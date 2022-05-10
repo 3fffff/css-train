@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                min-height:100vh;
+                background:#222327;
+
+            }
+            .navigation{
+                position:relative;
+                width:400px;
+                height:60px;
+                background:#fff;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-radius:10px;
+            }
+            .navigation ul{
+                display: flex;
+                list-style: none;
+                width:350px;
+            }
+            .navigation ul li{
+                position:relative;
+                width:70px;
+                height:60px;
+                z-index:2;
+            }
+            .navigation ul li a{
+                position:relative;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                height:100%;
+                width:100%;
+            }
+            .navigatiob ul li a .icon{
+                position:relative;
+                display: block;
+                width:55px;
+                height:55px;
+                text-align:center;
+                border-radius:50%;
+                color:#222327;
+                font-size:1.5em
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
