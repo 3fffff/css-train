@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+            height: 100vh;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        .navigation.active {
+            width: 300px;
+        }
+
+        .navigation .hambwrap {
+            border-bottom: 1px solid rgb(211, 211, 211);
+            padding: 0 15px;
+        }
+
+        .navigation .hambwrap .hamb {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+        }
+
+        .navigation.active .hambwrap .hamb {
+            width: 25px;
+        }
+
+        .navigation .hambwrap .hamb::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: #000;
+            transform: translateY(-10px);
+            box-shadow: 0 10px #222;
+        }
+
+        .navigation .hambwrap .hamb::after {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: #000;
+            transform: translateY(10px);
+        }
+
+        .navigation.active .hambwrap .hamb::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: #000;
+            transform: rotate(45deg);
+            box-shadow: unset;
+            transition:0.5s;
+        }
+
+        .navigation.active .hambwrap .hamb::after {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: #000;
+            transform: rotate(-45deg);
+            transition:0.5s
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            list-style: none;
+            display: flex;
+            padding: 10px 16px;
+        }
+
+        .navigation .profile {
+            width: 100%;
+            height: 100%;
+            padding: 5px 0px;
+            display:flex;
+            justify-content: center;
+            box-shadow: 0 1px rgba(211,211,211)
+        }
+
+        .navigation.active .profile {
+            width: 200px;
+            height: 200px;
+            padding: 10px 50px;
+            transition:0.5s
+        }
+
+        .navigation .profile .imgBx {
+            height: 60px;
+            width: 60px;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: 0.5s
+        }
+        .navigation.active .profile .imgBx {
+            height: 200px;
+            width: 200px;
+        }
+
+        .navigation .profile .imgBx img {
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cube {
+            min-width: 50px;
+            min-height: 50px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        span {
+            font-weight: 600;
+            margin-top:5%;
+            margin-left:15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="hambwrap">
+            <div class="hamb"></div>
+        </div>
+        <div class="profile">
+            <div class="imgBx"><img src="Chrysanthemum.jpg" /></div>
+        </div>
+        <ul class="menu">
+            <li>
+                <div class="cube"></div>
+                <span>text efghtrhyr</span>
+            </li>
+            <li>
+                <div class="cube"></div>
+                <span>tex fhyrh</span>
+            </li>
+            <li>
+                <div class="cube"></div>
+                <span>text trhyhjty</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const elms = document.querySelectorAll('.hamb')
+    elms.forEach(val => {
+        val.addEventListener("click", function () {
+            const nav = document.getElementsByClassName("navigation")
+            nav[0].classList.toggle("active")
+        })
+    })
+</script>
+
+</html>
