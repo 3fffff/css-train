@@ -1,1 +1,61 @@
 
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                min-height:100vh;
+                background:#333
+            }
+            ul{
+                position: relative;
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                justify-content: center;
+            }
+            ul li{
+                list-style:none;
+            }
+            ul li a{
+                position:relative;
+                font-size:2em;
+                color:#fff;
+                text-decoration:none;
+                margin:10px 0;
+                display:inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <ul>
+                <span id="marker"></span>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <script>
+            const marker = document.querySelector('#marker')
+            const item = document.querySelector('ul li a')
+            function Indicator(e){
+                marker.style.top = e.offsetTop+'px'
+                marker.style.width = e.offsetWidth+'px'
+            }
+            item.forEach(link =>{
+                link.addEventListener(
+                    'mousemove',(e)=>{
+                        Indicator(e.target)
+                    }
+                )
+            })
+        </script>
+    </body>
+</html>
