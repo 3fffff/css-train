@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hover effects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            position:relative;
+            background:#222;
+            overflow:hidden;
+        }
+        ul li{
+            list-style:none;
+        }
+        ul li a{
+            position:relative;
+            display:block;
+            text-decoration:none;
+            text-transform:uppercase;
+            font-size:4em;
+            color:#fff;
+            font-weight:700;
+            transition:0.5s;
+        }
+        ul li a:hover{
+            color:rgba(255,255,255,0.1);
+            transform:translateY(-20px);
+        }
+        ul li a::before{
+            content:attr(data-text);
+            position:absolute;
+            pointer-events: none;
+            z-index:1;
+            font-size: 0.35em;
+            color:#3bffe8;
+            bottom:-20px;
+            font-weight:500;
+            letter-spacing: 10px;
+            opacity:0;
+            transition:0.5s;
+        }
+        ul li a:hover::before{
+            opacity:1;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li><a href="#" data-text="Home">Home</a></li>
+            <li><a href="#" data-text="About">About</a></li>
+            <li><a href="#" data-text="Contact">Contact</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>
