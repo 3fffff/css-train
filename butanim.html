@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                height:100vh
+            }
+            .container{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height:100vh
+            }
+            .but{
+                position:relative;
+                padding:10px 30px;
+                border:none;
+                text-transform: uppercase;
+                background:#444;
+                color:#fff;
+                letter-spacing: 0.1em;
+                font-size:1.5em;
+            }
+            .but:hover{
+                letter-spacing: 0.25em;
+            }
+            .but::before{
+                content:'';
+                position:absolute;
+                inset:2px;
+                background:#27282c;
+            }
+            .but span{
+                position:relative;
+                z-index:1;
+            }
+            .but i{
+                position:absolute;
+                inset:0;
+                display:block;
+            }
+            .but i::before{
+                content:'';
+                position:absolute;
+                width:10px;
+                height:5px;
+                left:80%;
+                top:-3.5px;
+                border:2px solid #fff;
+                transition:0.5s;
+            }
+            .but:hover i::before{
+                width:20px;
+                left:20%
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <button class="but"><span>button</span><i></i></button>
+        </div>
+    </body>
+</html>
