@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        circle animation
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            height: 100vh;
+            background: #222;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .card {
+            position: relative;
+            width: 220px;
+            height: 250px;
+            background: #2a2a2a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card .percent {
+            position: relative;
+            height: 150px;
+            width: 150px;
+            transform: rotate(270deg);
+        }
+
+        .card .percent svg circle {
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+            stroke-width: 2;
+            stroke: #191919;
+            transform: translate(5px, 5px);
+        }
+
+        .card .percent svg circle:nth-child(2) {
+            stroke: var(--clr);
+            stroke-dasharray: 440;
+            stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+        }
+
+        .card .percent .dot {
+            position: absolute;
+            background: transparent;
+            inset: 5px;
+            transform: rotate(calc(3.6deg * var(--num) + 90deg));
+        }
+
+        .dot::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: var(--clr);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+        }
+        .card .number{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card .number{
+            color:#fff
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="percent" style="--clr:#04fc43;--num:85;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div class="number">
+                <h2>85%</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--clr:#04fc43;--num:85;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div class="number">
+                <h2>85%</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--clr:#04fc43;--num:85;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div class="number">
+                <h2>85%</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--clr:#04fc43;--num:85;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div class="number">
+                <h2>85%</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
