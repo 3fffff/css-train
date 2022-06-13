@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Text Animation</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                height:100vh;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap:30px;
+                background:#1d2b3a;
+            }
+            .inputBox{
+               /* margin-top:20px;*/
+               position:relative;
+               width:250px;
+            }
+            .inputBox input{
+                width:100%;
+                padding:10px;
+                border:1px solid rgba(255,255,255,0.25);
+                background:#1d2b3a;
+                border-radius:5px;
+                outline:none;
+                color:#fff;
+                font-size:1em
+            }
+            .inputBox span{
+                position:absolute;
+                top:0;
+                left:0;
+                padding:10px;
+                pointer-events:none;
+                font-size:1em;
+                font-size:1em;
+                color:rgba(255,255,255,0.25);
+                text-transform: uppercase;
+                transition:0.5s
+            }
+            .inputBox input:valid ~ span,
+            .inputBox input:focus ~ span{
+                color:#00dfc4;
+                transform: translateX(10px) translateY(-7px);
+                font-size:0.65em
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inputBox">
+            <input type="text" required="required">
+            <span>First Name</span>
+        </div>
+        <div class="inputBox">
+            <input type="text" required="required">
+            <span>Last Name</span>
+        </div>
+    </body>
+</html>
