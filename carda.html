@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            position: relative;
+            width: 350px;
+            height: 85px;
+            background: #398cc0;
+            border-radius: 20px;
+            filter: drop-shadow(-20px 20px 40px #398cc0);
+            transition: 0.5s ease-in-out;
+        }
+
+        .toggle {
+            position: absolute;
+            bottom: -60px;
+            left: calc(50% - 35px);
+            width: 70px;
+            height: 60px;
+            background: #398cc0;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            cursor: pointer;
+            z-index:-1;
+        }
+
+        .toggle::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            width: 35px;
+            height: 35px;
+            background: transparent;
+            border-top-right-radius: 35px;
+            box-shadow: 11px -10px 0 10px #398cc0;
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            right: -34px;
+            width: 35px;
+            height: 35px;
+            background: transparent;
+            border-top-left-radius: 35px;
+            box-shadow: -11px -10px 0 10px #398cc0;
+        }
+
+        .toggle span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%) rotate(405deg);
+            width: 10px;
+            height: 10px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            font-weight: 500;
+            font-size: 1.2em;
+            transition:0.5s ease;
+        }
+
+        .card.active {
+            height: 420px;
+        }
+        .card.active .toggle span{
+            transform: translate(-50%, -70%) rotate(225deg);;
+        }
+
+        .imgBx {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: -10 10px 10px rgba(0, 0, 0, 0.15);
+            border: 5px solid #fff;
+        }
+
+        .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contentBx {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+            transition: 0.5s;
+        }
+        .contentBx .content{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content button{
+            padding:10px 20px;
+            margin-top:15px;
+            border-radius: 20px;
+            border:none;
+            outline: none;
+        }
+        .content h2{
+            padding:20px;
+            margin-top:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="contentBx">
+                <div class="content">
+                    <h2>content</h2>
+                    <div class="imgBx">
+                        <img src="" />
+                    </div>
+                    <button>button</button>
+                </div>
+            </div>
+            <div class="toggle"><span></span></div>
+        </div>
+    </div>
+    <script>
+        const card = document.querySelector(".card")
+        const toggle = document.querySelector(".toggle")
+        toggle.addEventListener("click", () => {
+            card.classList.toggle("active")
+        })
+    </script>
+</body>
+
+</html>
