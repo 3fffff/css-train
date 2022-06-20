@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS only accordion design</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                height:100vh;
+                background:#f5f8ff
+            }
+            .container{
+                height:100%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap:20px;
+            }
+            .tab{
+                position:relative;
+                width:500px;
+                height:150px;
+                background:#fff;
+                padding: 0 20px 20px;
+                box-shadow:0 15px 25px rgba(0,0,0,0.05);
+                border-radius:5px;
+                overflow:hidden
+                 
+            }
+            .container .tab input{
+                appearance: none;
+            }
+            .container .tab label{
+                display:flex;
+                align-items: center;
+                cursor:pointer;
+            }
+            .container .tab label::after{
+                content:'+';
+                position:absolute;
+                right:20px;
+                font-size:2em;
+                color:rgba(0,0,0,0.1);
+                transition:1s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Frequently asked questions?</h1>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc1">
+                <label for="acc1">
+                    <h2>01</h2>
+                    <h3>How do I apply?</h3>
+                </label>
+                <div class="content">
+                    <p>Lorem,ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
