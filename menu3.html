@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .container ul {
+            padding: 10px 5px;
+            background: red;
+            width: 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            gap: 20px
+        }
+
+        .container ul li {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            list-style: none;
+            border-radius: 50%;
+        }
+
+        .container ul li:hover {
+            background: aqua;
+        }
+
+        .container ul li a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-weight: 600;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .container ul li a span {
+            position: absolute;
+            left: 125%;
+            background: aquamarine;
+            padding: 0px 5px;
+            visibility: hidden;
+            
+        }
+
+        .container ul li a span::before {
+            content: '';
+            position: absolute;
+            height:20px;
+            width:20px;
+            left:-10%;
+            transform:rotate(45deg);
+            background: aquamarine;
+            z-index:-1;
+            top:5px;
+        }
+
+        .container ul li:hover a span {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#">
+                    <p>text</p>
+                    <span>stext</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>text</p>
+                    <span>stext</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>text</p>
+                    <span>stext</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
