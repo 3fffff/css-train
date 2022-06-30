@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fixed</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #365fa1;
+        }
+
+        .navigation {
+            position: fixed;
+            inset: 20px;
+            background: #287bff;
+            width: 80px;
+            border-left:10px solid #287bff;
+            border-radius:50px;
+            overflow:hidden;
+            box-shadow:15px 15px 25px rgba(0,0,0,0.05)
+        }
+        .navigation.active{
+            width:300px
+        }
+        a{
+            text-decoration:none;
+            color:#fff
+        }
+        .toggle{
+            position: absolute;
+            border-radius:50%;
+            background:#fff;
+            right:15px;
+            bottom:15px;
+            width:50px;
+            height:50px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            cursor:pointer;
+        }
+        .toggle::before{
+            content:'';
+            position: absolute;
+            background:#287bff;
+            width:26px;
+            height:3px;
+            border-radius:3px;
+            transform: translateY(-5px);
+        }
+
+        .toggle::after{
+            content:'';
+            position: absolute;
+            background:#287bff;
+            width:26px;
+            height:3px;
+            border-radius:3px;
+            transform: translateY(5px);
+        }
+        .navigation.active .toggle::before{
+            transform:translateY(0px) rotate(-405deg)
+        }
+        .navigation.active .toggle::after{
+            transform:translateY(0px) rotate(225deg)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+            <li><a href="#"><span>text</span><span>text</span></a></li>
+        </ul>
+        <div class="toggle"></div>
+    </div>
+    <script>
+        const nav=document.querySelector(".navigation")
+        const elm=document.querySelector(".toggle")
+        elm.onclick = function(){
+            nav.classList.toggle("active")
+        }
+    </script>
+</body>
+
+</html>
