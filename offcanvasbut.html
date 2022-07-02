@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #cbe058;
+        }
+
+        .but {
+            text-decoration: none;
+            padding: 15px 40px;
+            background: #fff;
+            color: #555;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2em;
+            letter-spacing: 0.1em;
+            transition: 0.5s;
+            clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+        }
+
+        .but:hover {
+            background: #a7b612;
+            color: #fff;
+            letter-spacing: 0.3em;
+            clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 100%, 0% 50%, 10% 0);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        #menu-toggle {
+            visibility: visible;
+        }
+
+        #menu-toggle:checked~.sidenav {
+            width: 250px;
+        }
+
+        #menu-toggle:checked~.content {
+            margin-left: 250px;
+        }
+
+        .content {
+            transition: margin-left .5s;
+        }
+        #menu-toggle{
+            visibility: hidden;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <input id="menu-toggle" type="checkbox">
+    <div id="Sidenav" class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <label class="btn" for="menu-toggle">
+            <span class="but">Button</span>
+        </label>
+    </div>
+</body>
+
+</html>
