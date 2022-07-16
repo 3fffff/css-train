@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<style>
+body {
+  font: 500 1rem/1.5rem "Helevtica Neue", arial, sans;
+}
+@keyframes go-unrotate {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes go-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+.ui_control-label > input[type="radio"],
+.ui_control-label > input[type="checkbox"],
+.ui_control-list li > input[type="radio"],
+.ui_control-list li > input[type="checkbox"],
+.ui_control-reset {
+  left: -600rem;
+  position: absolute;
+  top: -35rem;
+}
+.ui_control-label {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  position: relative;
+}
+.ui_control-label:hover {
+  background-color: #dcdcdc;
+}
+.ui_control-label > i {
+  animation: go-unrotate 50ms ease-in-out;
+  left: 0;
+  position: absolute;
+  transition: transform 50ms ease-out;
+}
+.ui_control-label.base {
+  display: flex;
+}
+.ui_control-label.on {
+  display: none;
+}
+.ui_control-list {
+  list-style: none;
+  padding: 0;
+}
+.ui_control-list li {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+.ui_control-list li > .ui_control-content {
+  height: 0;
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+.ui_control-list .ui_control-content > li {
+  padding-left: 1.5rem;
+}
+.ui_control-radio:not(.ui_control-reset):focus ~ .ui_control-label,
+.ui_control-checkbox:not(.ui_control-reset):focus ~ .ui_control-label {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.ui_control-radio:not(.ui_control-reset):checked ~ .ui_control-label.base,
+.ui_control-checkbox:not(.ui_control-reset):checked ~ .ui_control-label.base {
+  display: none;
+}
+.ui_control-radio:not(.ui_control-reset):checked ~ .ui_control-label.on,
+.ui_control-checkbox:not(.ui_control-reset):checked ~ .ui_control-label.on {
+  display: flex;
+}
+.ui_control-radio:not(.ui_control-reset):checked ~ .ui_control-label > i,
+.ui_control-checkbox:not(.ui_control-reset):checked ~ .ui_control-label > i {
+  animation: go-rotate 50ms ease-in-out;
+  transform: rotate(90deg);
+}
+.ui_control-radio:not(.ui_control-reset):checked ~ .ui_control-content,
+.ui_control-checkbox:not(.ui_control-reset):checked ~ .ui_control-content {
+  height: auto;
+  padding: 0.5rem 0 0;
+  opacity: 1;
+}
+</style>
+
+
+<style></style></head>
+
+<body translate="no">
+  <div class="treeview-container">
+  <input class="ui_control ui_control-radio ui_control-reset" id="ui_control-reset" name="ui_control_treeview1" tabindex="1" type="radio" value="">
+  <ul class="ui_control-list ui_control-radioModel">
+    <li>
+      <input id="item1" class="ui_control ui_control-radio" name="ui_control_treeview1" tabindex="0" type="radio">
+      <label class="ui_control-label base" for="item1"><i class="material-icons">keyboard_arrow_right</i>Item1</label>
+      <label class="ui_control-label on" for="ui_control-reset"><i class="material-icons">keyboard_arrow_right</i>Item1</label>
+      <ul class="ui_control-list ui_control-radioModel ui_control-content">
+        <li>
+          <label class="ui_control-label base"><a href="#" tabindex="-1">Item1.1</a></label>
+        </li>
+        <li class="treeview-container">
+          <input class="ui_control ui_control-radio ui_control-reset" id="ui_control-reset-1-2" name="ui_control_treeview1-2" tabindex="-1" type="radio" value="">
+          <input id="item1-2" class="ui_control ui_control-radio" name="ui_control_treeview1-2" tabindex="0" type="radio" checked="checked">
+          <label class="ui_control-label base" for="item1-2"><i class="material-icons">keyboard_arrow_right</i>Item1.2 has a really long name</label>
+          <label class="ui_control-label on" for="ui_control-reset-1-2"><i class="material-icons">keyboard_arrow_right</i>Item1.2</label>
+          <ul class="ui_control-list ui_control-radioModel ui_control-content">
+            <li><label class="ui_control-label base">Item1.2.1</label></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label class="ui_control-label base">Item2</label>
+    </li>
+    <li>
+      <input id="item3" class="ui_control ui_control-radio" name="ui_control_treeview1" type="radio" checked="checked">
+      <label class="ui_control-label base" for="item3"><i class="material-icons">keyboard_arrow_right</i>Item3</label>
+      <label class="ui_control-label on" for="ui_control-reset"><i class="material-icons">keyboard_arrow_right</i>Item3</label>
+      <ul class="ui_control-list ui_control-radioModel ui_control-content">
+        <li>
+          <label class="ui_control-label base">Item3.1</label>
+        </li>
+        <li>
+          <label class="ui_control-label base">Item3.2</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    <script src="VdbRPj_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  
+      <script id="rendered-js">
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = init;const nestedReset = args => {
+  return args.reduce((acc, arg) => {
+    if (arg.isArray) {
+      return col.forEach(nli => {
+        if (/HTML/g.test(Object.prototype.toString.call(nli))) {
+          const reset = nli.querySelector(".ui_control-reset");
+          return reset && reset.click();
+        }
+      });
+    }
+    acc.push(arg);
+    return acc;
+  }, []);
+};
+
+const listenToRadioChange = (group, cb, ...args) => {
+  group.forEach(l1li => {
+    l1li.addEventListener("change", () => {
+      if (cb) {
+        cb(args);
+      }
+    });
+  });
+};
+
+function init(element) {
+  // Kill it if there is not an proper HTML element passed in.
+  if (!element || !/HTML/g.test(Object.prototype.toString.call(element)))
+  return;
+  // Find nested treeviews
+  const nestedTreevs = [...element.querySelectorAll(".treeview-container")];
+  // Get the name of the Components Top Level radio group
+  // Reset is always the first component in a treeview-container
+  const l1Reset = element.querySelector(".ui_control-reset");
+  const l1TreevName = l1Reset ? l1Reset.name : undefined;
+  // An array of elements ub the Top Level radio group
+  const l1radioGroup = l1TreevName ? [...element.querySelectorAll(`[name=${l1TreevName}]`)] : undefined;
+
+  if (l1radioGroup && l1radioGroup.length >= 1) {
+    //radiogroup, callback, properties for callback
+    listenToRadioChange(l1radioGroup, nestedReset, nestedTreevs, "purple");
+  }
+}
+
+// This would be handled in a binder function of some sort.
+const element = document.querySelector(".treeview-container");
+init(element);
+
+const accessModel = ev => {
+
+  return {
+    currentItem,
+    group,
+    groupName,
+    parentgroup,
+    nestedItems,
+    nestedItemGroup,
+    state };
+
+
+};
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
